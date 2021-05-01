@@ -4,6 +4,8 @@ import Header from "./components/layout/Header";
 import Landing from "./components/layout/Landing";
 import Footer from "./components/layout/Footer";
 import Register from "./components/auth/Register";
+import { Provider } from "react-redux";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +21,7 @@ import routers from "./components/routes/Routers";
 
 function App() {
   return (
+    <Provider>
     <Router>
       <div className="App">
         <Header />
@@ -29,6 +32,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </Provider>
   );
 }
 
