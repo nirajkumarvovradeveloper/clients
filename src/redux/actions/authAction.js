@@ -13,7 +13,7 @@ export default register = ({ email, password, name }) => async (dispatch) => {
     
     try{
         const res = await axios.post('/api/users', body, config)
-    } catch(){
+    } catch(e){
 
     }
 
