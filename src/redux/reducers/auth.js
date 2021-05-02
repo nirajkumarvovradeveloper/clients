@@ -1,3 +1,5 @@
+import { LOGIN_SUCCESS, REGISTER_SUCCESS } from "../types";
+
 const initialState = {
     token : localStorage.getItem("token"),
     isAuthenticated : false,
@@ -11,6 +13,11 @@ export default (state = initialState, action) => {
 
 const { type, payload } = action;
     switch (type) {
+    case LOGIN_SUCCESS:
+
+    case REGISTER_SUCCESS:
+
+        localStorage.setItem("token", payload.token);
 
     case typeName:
         return { ...state, ...payload };
