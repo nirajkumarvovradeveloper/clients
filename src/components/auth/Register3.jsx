@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
-export const Register3 = ( {register, isAuthenticated} ) => {
+import { register3 } from '../../redux/actions/authAction';
+//1:15 removed export from next line 1:19
+const Register3 = ( {register, isAuthenticated} ) => {
     const [formData, setformData] = useState({
         name: "abhi",
         password: "",
@@ -21,7 +22,7 @@ export const Register3 = ( {register, isAuthenticated} ) => {
         e.preventDefault();
         console.log(JSON.stringify(formData));
         console.log("submit event called");
-        
+        register.formData();//check again
         // axios
         //   .post(api, formData) // api, data
         //   .then((res) => {
@@ -110,3 +111,5 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Register3);
+// it will call a dispatch method
+

@@ -1,5 +1,5 @@
 import {combinedReducers} from "redux";
 
 export default combinedReducers({
-    auth;
+    auth, //1:30
 });

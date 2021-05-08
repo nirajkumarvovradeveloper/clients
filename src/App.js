@@ -18,7 +18,7 @@ import routers from "./components/routes/Routers";
 // Route  : it is used to handle the routing for a specific component
 // NavLink : we will use it for handling Navigation part in UI(Header).
 // Link : we will use it for handling Navigation part in UI (anywhere).
-
+import store from "redux/src"; // check this one; 1:06
 function App() {
   return (
     <Provider>
